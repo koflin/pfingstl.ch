@@ -95,12 +95,14 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .nav-brand {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -115,51 +117,18 @@ h1, h2, h3 {
   text-decoration: none;
   color: var(--text-secondary);
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 .nav-links a:hover {
   color: var(--text-primary);
 }
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-}
-.nav-toggle span {
-  width: 22px;
-  height: 2px;
-  background: var(--text-primary);
-}
-
-@media (max-width: 680px) {
+@media (max-width: 420px) {
   .nav-inner {
-    flex-wrap: wrap;
-  }
-  .nav-toggle {
-    display: flex;
+    padding: 14px 16px;
   }
   .nav-links {
-    flex: 1 1 100%;
-    order: 3;
-    flex-direction: column;
-    gap: 0;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.25s ease;
-  }
-  .nav-links.is-open {
-    max-height: 320px;
-  }
-  .nav-links a {
-    display: block;
-    padding: 14px 24px;
-    border-top: 1px solid var(--border);
+    gap: 16px;
   }
 }
 
